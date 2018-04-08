@@ -15,7 +15,4 @@ class OpenWeatherMapWeatherProvider implements WeatherProviderInterface
         return $weather;
     }
 
-    public function hello() {
-        echo "hello, open weather is loaded".PHP_EOL;
-    }
 }

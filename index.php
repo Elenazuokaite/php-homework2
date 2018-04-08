@@ -8,9 +8,7 @@ use Nfq\Weather\WeatherProviderInterface;
 require_once __DIR__.'/vendor/autoload.php';
 
 $yahoo = new YahooWeatherProvider();
-$yahoo->hi();
 $openWeather = new OpenWeatherMapWeatherProvider();
-$openWeather->hello();
 
 
 function run(WeatherProviderInterface $provider)

@@ -18,7 +18,4 @@ class YahooWeatherProvider implements WeatherProviderInterface
 
         return $weather;
     }
-    public function hi() {
-        echo 'Hi, yahoo is loaded'.PHP_EOL;
-    }
 }
