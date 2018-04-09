@@ -1,11 +1,14 @@
 <?php
 namespace Nfq\Weather;
 
-class Location {
-    public $lon;
-    public $lat;
-    public function __construct(string $lon, $lat) {
-        $this->lon = $lon;
-        $this->lat = $lat;
-    }    
+class Location {   
+    private $city;
+	public function __construct(string $city)
+    {
+        $this->city = $city;
+    }
+    public function getCity()
+    {
+	    return $this->city;
+    }
 }
