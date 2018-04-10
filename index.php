@@ -13,7 +13,7 @@ $api_key = '8b14eb2c5beed13dd28c80dffdf74d42';
 $yahoo = new YahooWeatherProvider();
 $openWeather = new OpenWeatherMapWeatherProvider($api_key);
 
-class Provider 
+class MainProvider 
 {  
   public static function run(WeatherProviderInterface $provider)
   {
@@ -24,5 +24,5 @@ class Provider
   }
 }
 
-$delegateProvider = new DelegatingWeatherProvider(array($openWeather, $yahoo));
-Provider::run($delegateProvider);
+$delegatingProvider = new DelegatingWeatherProvider(array($openWeather, $yahoo));
+MainProvider::run($delegatingProvider);
